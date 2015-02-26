@@ -9,11 +9,11 @@ public class Productos {
 	
 	public Productos(Scanner sc) {
 
-		System.out.println("Cuantos productos quieres insertar? ");
+		System.out.println("¿Cuantos productos quieres insertar? ");
 		int seleccion = sc.nextInt();
 		for (int i = 0; i < seleccion; i++) {
 			
-			System.out.println("�Qu� producto quieres insertar?");
+			System.out.println("¿Qué producto quieres insertar?");
 			System.out.println("MANZANA:--------1");
 			System.out.println("LECHE:----------2");
 			System.out.println("LECHUGA:--------3");
@@ -32,7 +32,7 @@ public class Productos {
 					listaProductos.add(lechuga);
 					break;
 				default:
-					System.out.println("No ha insertado la opci�n correcta.");
+					System.out.println("No ha insertado la opción correcta.");
 					break;
 			}			
 		}
@@ -45,7 +45,7 @@ public class Productos {
 		}
 		for (int i = 0;i < listaProductos.size();i++) {
 			Producto producto = listaProductos.get(i);
-			producto.mostrarProducto(); //dispatching din�mico a partir de polimorfismo
+			producto.mostrarProducto(); //dispatching dinámico a partir de polimorfismo
 		}
 	}
 

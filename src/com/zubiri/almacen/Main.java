@@ -49,9 +49,10 @@ public class Main {
 					case 4: //Salimos
 						break;
 					default:
-						System.out.println("No ha insertado la opci�n correcta");
+						System.out.println("No ha insertado la opción correcta");
 				}
 			}catch(InputMismatchException e){
+				System.out.println("No ha insertado la opción correcta"")
 				sc.nextLine();
 			}
 		} while (seleccion != 4);
