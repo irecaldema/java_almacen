@@ -30,7 +30,7 @@ public abstract class Producto {
 		System.out.println("Marca del producto:");
 		this.setMarca(sc.next());
 		System.out.println("Precio del producto:");
-		this.setMarca(sc.next());
+		this.setPrecio(sc.nextDouble());
 		System.out.println("Procedencia del producto:");
 		this.setProcedencia(sc.next());
 		System.out.println("Distribuidor del producto:");
