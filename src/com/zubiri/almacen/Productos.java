@@ -2,16 +2,18 @@ package com.zubiri.almacen;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class Productos {
 	
 	private ArrayList<Producto> listaProductos = new ArrayList<Producto>();	
 	
 	public Productos(Scanner sc) {
+		int seleccion=0;
 		do{
 			try{
 				System.out.println("¿Cuantos productos quieres insertar? ");
-				int seleccion = sc.nextInt();
+				seleccion = sc.nextInt();
 			}catch(InputMismatchException e){
 				System.out.println("No ha insertado la opción correcta");
 				sc.nextLine();
@@ -42,7 +44,7 @@ public class Productos {
 						break;
 				}
 			}catch(InputMismatchException e){
-				System.out.println("No ha insertado la opción correcta"")
+				System.out.println("No ha insertado la opción correcta");
 				sc.nextLine();
 			}
 		}

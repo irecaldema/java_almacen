@@ -39,12 +39,12 @@ public class Manzana extends Producto  implements Enviable {
 	
 	public void setTipo(String tipo) throws Exception {
 		switch(tipo){
-			case DELICIOUS:
-			case delicious:
-			case GOLDEN:
-			case golden:
-			case RED:
-			case red:
+			case "DELICIOUS":
+			case "delicious":
+			case "GOLDEN":
+			case "golden":
+			case "RED":
+			case "red":
 				this.tipo = tipo;
 				break;
 			default:
