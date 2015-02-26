@@ -8,9 +8,15 @@ public class Productos {
 	private ArrayList<Producto> listaProductos = new ArrayList<Producto>();	
 	
 	public Productos(Scanner sc) {
-
-		System.out.println("¿Cuantos productos quieres insertar? ");
-		int seleccion = sc.nextInt();
+		do{
+			try{
+				System.out.println("¿Cuantos productos quieres insertar? ");
+				int seleccion = sc.nextInt();
+			}catch(InputMismatchException e){
+				System.out.println("No ha insertado la opción correcta");
+				sc.nextLine();
+			}
+		}while(seleccion<0);	
 		for (int i = 0; i < seleccion; i++) {
 			
 			System.out.println("¿Qué producto quieres insertar?");
