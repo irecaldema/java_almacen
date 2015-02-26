@@ -38,7 +38,19 @@ public class Manzana extends Producto  implements Enviable {
 	}
 	
 	public void setTipo(String tipo) {
-		this.tipo = tipo;
+		switch(tipo){
+			case DELICIOUS:
+			case delicious:
+			case GOLDEN:
+			case golden:
+			case RED:
+			case red:
+				this.tipo = tipo;
+				break;
+			default:
+				throw new Exception("Tipo de manzana permitida DELICIOUS-GOLDEN-RED") 
+		}
+		
 	}
 	
 	public String getColor() {

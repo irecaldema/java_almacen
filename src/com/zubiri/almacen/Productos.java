@@ -18,29 +18,33 @@ public class Productos {
 			}
 		}while(seleccion<0);	
 		for (int i = 0; i < seleccion; i++) {
-			
-			System.out.println("¿Qué producto quieres insertar?");
-			System.out.println("MANZANA:--------1");
-			System.out.println("LECHE:----------2");
-			System.out.println("LECHUGA:--------3");
-		    
-			switch(sc.nextInt()) {
-				case 1:
-					Manzana manzana = new Manzana(sc);
-					listaProductos.add(manzana);
-					break;
-				case 2:
-					Leche leche = new Leche(sc);
-					listaProductos.add(leche);
-					break;
-				case 3:
-					Lechuga lechuga = new Lechuga(sc);
-					listaProductos.add(lechuga);
-					break;
-				default:
-					System.out.println("No ha insertado la opción correcta.");
-					break;
-			}			
+			try{
+				System.out.println("¿Qué producto quieres insertar?");
+				System.out.println("MANZANA:--------1");
+				System.out.println("LECHE:----------2");
+				System.out.println("LECHUGA:--------3");
+			    
+				switch(sc.nextInt()) {
+					case 1:
+						Manzana manzana = new Manzana(sc);
+						listaProductos.add(manzana);
+						break;
+					case 2:
+						Leche leche = new Leche(sc);
+						listaProductos.add(leche);
+						break;
+					case 3:
+						Lechuga lechuga = new Lechuga(sc);
+						listaProductos.add(lechuga);
+						break;
+					default:
+						System.out.println("No ha insertado la opción correcta.");
+						break;
+				}
+			}catch(InputMismatchException e){
+				System.out.println("No ha insertado la opción correcta"")
+				sc.nextLine();
+			}
 		}
 	} 
 		 
