@@ -37,7 +37,7 @@ public class Manzana extends Producto  implements Enviable {
 		return tipo;
 	}
 	
-	public void setTipo(String tipo) {
+	public void setTipo(String tipo) throws Exception {
 		switch(tipo){
 			case DELICIOUS:
 			case delicious:
@@ -48,7 +48,7 @@ public class Manzana extends Producto  implements Enviable {
 				this.tipo = tipo;
 				break;
 			default:
-				throw new Exception("Tipo de manzana permitida DELICIOUS-GOLDEN-RED") 
+				throw new Exception("Tipo de manzana permitida DELICIOUS-GOLDEN-RED"); 
 		}
 		
 	}
