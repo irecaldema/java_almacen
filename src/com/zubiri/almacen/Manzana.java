@@ -23,7 +23,7 @@ public class Manzana extends Producto  implements Enviable {
 		this.color = color;
 	}
 	
-	public Manzana(Scanner sc) {
+	public Manzana(Scanner sc) thrws Exception{
 
 		super(sc);
 		System.out.println("Tipo de manzana (DELICIOUS-GOLDEN-RED):");
