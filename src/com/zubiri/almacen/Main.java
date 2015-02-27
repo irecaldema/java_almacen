@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.Scanner;
 import java.util.InputMismatchException;
+import java.io.FileNotFoundException;
 
 public class Main {
 
@@ -15,12 +16,20 @@ public class Main {
 		
 		if (args.length == 0) {
 			System.out.println("El número de argumentos no es válido:");
-			System.out.println("java main.java <fichero_distribuidores>");
+			System.out.println("java main <fichero_distribuidores>");
 			System.exit(-1);
 		} 
 		
     	//Leemos la lista de distribuidores del fichero.
-		Distribuidores.leerDistribuidores(args[0]);
+    	try {
+			Distribuidores.leerDistribuidores(args[0]);
+    	} catch (FileNotFoundException errorifico) {
+    		System.out.println("El archivo de distribuidores no es el correcto");
+    		System.out.println("java main <fichero_distribuidores>");
+    		System.exit(-1);
+    	} finally {
+			System.out.println("Lectura realizada");
+		}
 
 		do {
 			try{
