@@ -11,6 +11,7 @@ public class Main {
 	public static void main(String[] args) throws IOException,UnsupportedEncodingException {
 	
 		int seleccion=0;
+		int error=0;
 		Scanner sc = new Scanner(System.in);
 		Productos productos = null;
 		
@@ -23,10 +24,15 @@ public class Main {
     	//Leemos la lista de distribuidores del fichero.
     	do{
 	    	try {
-				Distribuidores.leerDistribuidores(args[0]);
+	    		if (error==0){
+					Distribuidores.leerDistribuidores(args[0]);
+	    		}	
+				else{	
+					Distribuidores.leerDistribuidores("../"+sc.next());//una carpeta hacia arriba de src/
+	    		}
 	    	} catch (FileNotFoundException errorifico) {
 	    		System.out.println("El archivo de distribuidores no es el correcto");
-	    		Distribuidores.leerDistribuidores("../"+sc.next());//una carpeta hacia arriba de src/
+	    		error=1;
 	    	}	
 		}while(Distribuidores.getDistribuidores().size()==0);	
 
