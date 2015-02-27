@@ -21,15 +21,14 @@ public class Main {
 		} 
 		
     	//Leemos la lista de distribuidores del fichero.
-    	try {
-			Distribuidores.leerDistribuidores(args[0]);
-    	} catch (FileNotFoundException errorifico) {
-    		System.out.println("El archivo de distribuidores no es el correcto");
-    		System.out.println("java main <fichero_distribuidores>");
-    		System.exit(-1);
-    	} finally {
-			System.out.println("Lectura realizada");
-		}
+    	do{
+	    	try {
+				Distribuidores.leerDistribuidores(args[0]);
+	    	} catch (FileNotFoundException errorifico) {
+	    		System.out.println("El archivo de distribuidores no es el correcto");
+	    		Distribuidores.leerDistribuidores("../"+sc.next());
+	    	}	
+		}while(Distribuidores.getDistribuidores().size()==0);	
 
 		do {
 			try{

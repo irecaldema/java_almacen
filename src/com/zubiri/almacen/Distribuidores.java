@@ -25,6 +25,10 @@ public class Distribuidores {
 	private Distribuidores() {
 		
 	}
+	
+	public static ArrayList <Distribuidor> getDistribuidores(){
+		return listaDistribuidores;
+	}
 
 	public static void leerDistribuidores(String fichero) throws IOException {
 			String linea;
