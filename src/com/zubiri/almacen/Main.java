@@ -26,7 +26,7 @@ public class Main {
 				Distribuidores.leerDistribuidores(args[0]);
 	    	} catch (FileNotFoundException errorifico) {
 	    		System.out.println("El archivo de distribuidores no es el correcto");
-	    		Distribuidores.leerDistribuidores("../"+sc.next());
+	    		Distribuidores.leerDistribuidores("../"+sc.next());//una carpeta hacia arriba de src/
 	    	}	
 		}while(Distribuidores.getDistribuidores().size()==0);	
 
